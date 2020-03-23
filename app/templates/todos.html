@@ -1,0 +1,18 @@
+<head>
+    <meta charset="utf-8"/>
+    <title>List of My Whatodo</title>
+    <link rel="stylesheet" href="/static/my_app.css"/>
+  </head>
+  <body>
+    {% if data %}
+    <h3>Tasks found!</h3>
+      <ul>
+      {% for item_key, item in data %}
+          <li>{{ item.text }}: <b>{{ item.time }}</b> min</li>
+      {% endfor %}
+      </ul>
+    {% else %}
+      <h1>Boo, no data!</h1>
+    {% endif %}
+    <p><a href="/">Back to Front Page</a></p>
+  </body>

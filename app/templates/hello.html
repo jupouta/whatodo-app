@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8"/>
+  <title>My Whatodo App</title>
+  <link rel="stylesheet" href="/static/my_app.css"/>
+</head>
+<body>
+  <h1>Hello, and Welcome to My Page</h1>
+  <h2>This page will suggest you something to do.</h2>
+  <h2>Maybe you could...</h2>
+  {% if data %}
+    <h3>{{ data.text }}</h3>
+    <h3>It takes <b>{{ data.time }}</b> min</h3>
+    <form action="/" method="POST">
+      <button class="button">New suggestion!</button>
+    </form>
+    <p><a href="/todos">See all the data!</a></p>
+  {% else %}
+    <h1>Boo, no data!</h1>
+  {% endif %}
+</body>
