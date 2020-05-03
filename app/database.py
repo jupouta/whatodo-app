@@ -41,3 +41,18 @@ class Database:
             todo_ = Todo(todo.text, time=todo.time)
             todos.append((todo_key, todo_))
         return todos
+    
+    def filter_todo(self, filter):
+        todo = None
+        
+        while True:
+            rand_int = randint(0, self._last_todo_key-1)
+            todo_ = self.get_todo(rand_int)
+            
+            if todo_.time <= int(filter):
+                todo = todo_
+                break
+            else:
+                continue
+        
+        return todo

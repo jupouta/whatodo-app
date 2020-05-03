@@ -9,12 +9,26 @@
   <h2>This page will suggest you something to do.</h2>
   <h2>Maybe you could...</h2>
   {% if data %}
-    <h3>{{ data.text }}</h3>
-    <h3>It takes <b>{{ data.time }}</b> min</h3>
+    <p>{{ data.text }}</p>
+    <p>It takes <b>{{ data.time }}</b> min</p>
     <form action="/" method="POST">
-      <button class="button">New suggestion!</button>
+      <label for="time-select">Choose the max time for the activity:</label>
+
+      <select name="time-select">
+        <option name="time_key" value="">--Please choose the time--</option>
+        <option name="time_key" value="15">15 min</option>
+        <option name="time_key" value="30">30 min</option>
+        <option name="time_key" value="60">1 hr</option>
+      </select>
+      <p>
+        <button type="submit" class="button">New suggestion!</button>
+      </p>
+      
     </form>
-    <p><a href="/todos">See all the data!</a></p>
+    <form action="/todos" method="GET">
+      <button class="button">See all the data!</button>
+    </form>
+    
   {% else %}
     <h1>Boo, no data!</h1>
   {% endif %}

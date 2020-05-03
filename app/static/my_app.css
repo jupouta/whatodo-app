@@ -1,9 +1,72 @@
+html {
+    background-color: lightcoral;
+}
+body {
+    background-color: ivory;
+    width: 600px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
 h1 {
     color: orange;
+    text-align: center;
+    text-shadow: 1px 1px orangered,
+                2px 2px orangered;
 }
 h2 {
-    color: blue;
+    color: orangered;
+    font-family: Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 1px;
 }
+p {
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 a {
-    font-weight: bold;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+a:hover {
+    background-color: purple;
+    text-align: center;
+}
+
+.button {
+    background-color: plum;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+  
+.button:hover {
+    background-color: purple;
+    text-align: center;
+}
+
+label {
+    font-size: 1rem;
+    padding-right: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    letter-spacing: 1px;
 }

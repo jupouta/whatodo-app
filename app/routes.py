@@ -13,7 +13,9 @@ def home():
         todo = db.random_todo()
         return render_template("hello.html", data=todo)
     else:
-        return redirect(url_for('home'))
+        time = request.form.get('time-select')
+        todo = db.filter_todo(time)
+        return render_template("hello.html", data=todo)
 
 #@app.route("/todos")
 def todos_page():
